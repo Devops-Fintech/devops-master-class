@@ -12,7 +12,7 @@ steps:
   inputs:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
-    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret)'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public'
     backendType: 'azurerm'
     backendAzureRmSubscriptionId: '44264921-c508-46a1-b3de-20fc94e597ba'
     ensureBackend: true
