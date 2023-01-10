@@ -5,8 +5,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello,we're provisioning k8s in my Azure subscription!
-  displayName: 'run a one-line script'
+- script: echo'Hello,we're provisioning k8s in my Azure subscription!'
+  displayName: echo'run a one-line script'
 
 - task: DownloadSecureFile@1
   name: publickey
