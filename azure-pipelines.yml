@@ -8,3 +8,16 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret)'
+    backendType: 'azurerm'
+    backendAzureRmSubscriptionId: '44264921-c508-46a1-b3de-20fc94e597ba'
+    ensureBackend: true
+    backendAzureRmResourceGroupLocation: 'EastUS 2'
+    backendAzureRmStorageAccountName: 'storageaccountk8sxys'
+    backendAzureRmContainerName: 'containerk8smauricadev'
+    backendAzureRmKey: 'containerkeyk8sdev'
+    allowTelemetryCollection: true
